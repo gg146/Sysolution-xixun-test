@@ -1,0 +1,66 @@
+[TOC]
+
+# Android APK Solution
+
+## 1、Solution brief Introduction
+
+Develop own APK is the most flexible way. Some functions need to use the interfaces of Cardsystem (pls check xixun_card_setting.zip )
+
+Preparation：
+
+- At least know one kind of android program language (JAVA、Kotlin、Scala,etc）
+- Know basic knowledge of android（Activity，Service，BroadcastReceiver,etc）
+
+## 2、Check led controller android version
+
+### 2.1、download and install LedOK
+
+please visit https://www.sysolution.net/news/software-download-73889.html，Download and install LedOK express。
+
+
+![image-20200227165156967](../pictures/android-ledok1.png)
+
+### 2.2、Check led controller android version
+
+function ledOK， See the details
+![image-20200227165156967](../pictures/android-ledok2.png)
+
+### 2.3、Setup APK android compatible version
+
+Run android development tool, find build.gradle file under project app directory, open this file
+
+![image-20200227165318393](../pictures/Androidstudio.png)
+
+modify the lowest compatible version, following is the version table
+
+| API level | ***\*initial Android version\**** | ***\*Linux kernel version\**** |
+| --------- | --------------------------------- | ------------------------------ |
+| 28        | 9                                 |                                |
+| 27        | 8.1                               | 4.10                           |
+| 26        | 8.0                               | 4.10                           |
+| 25        | 7.1                               | 4.4.1                          |
+| 24        | 7.0                               | 4.4.1                          |
+| 23        | 6.0                               | 3.18.10                        |
+| 22        | 5.1                               | 3.16.1                         |
+| 21        | 5.0                               | 3.16.1                         |
+| 20        | 4.4w                              | 3.10                           |
+| 19        | 4.4                               | 3.10                           |
+| 18        | 4.3                               | 3.4.0                          |
+| 17        | 4.2                               | 3.4.0                          |
+| 16        | 4.1                               | 3.0.31                         |
+| 15        | 4.0.3                             | 3.0.1                          |
+| 14        | 4.0                               | 3.0.1                          |
+| 13        | 3.2                               | 2.6.36                         |
+| 12        | 3.1                               | 2.6.36                         |
+| 11        | 3.0                               | 2.6.36                         |
+
+## 3、If need API provided by Sysolution, Please import xixun_card_setting.jar file
+
+this file is in the same folder.
+
+## 4，Install third-party APK into led controller
+Open ledok, click terminal control, then click Advanced settings, enter password 888, and uninstall xixunplayer first
+
+![image-20200227165237548](../pictures/android-ledok3.png)
+
+Click APK to upgrade, select APK, click OK and wait for the prompt to upgrade successfully.
