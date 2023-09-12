@@ -88,15 +88,15 @@ when adopt nohup command to execute job, By default, all the output of the job i
 
 please  visit [(https://www.sysolution.net/news/software-download-73889.html)]  ，and download LEDOK express software : 
 
-![输入图片说明](https://github.com/gg146/Sysolution-xixun-test-master/blob/master/xixun-SDK/2.Realtime%20Solution/java%20version%20(recommend)/image/%E6%96%87%E6%A1%A3%E5%9B%BE%E7%89%871.jpg)
+![输入图片说明](https://github.com/gg146/Sysolution-xixun-test/blob/master/xixun-SDK/2.Realtime%20Solution/java%20version%20(recommend)/image/%E6%96%87%E6%A1%A3%E5%9B%BE%E7%89%871.jpg)
 
 download and install LEDOK express software success, then normally software will auto detect the controller IP address. 
 
-![image-20230909091432061](https://github.com/gg146/Sysolution-xixun-test-master/blob/master/xixun-SDK/2.Realtime%20Solution/java%20version%20(recommend)/image/%E6%96%87%E6%A1%A3%E5%9B%BE%E7%89%872.png)
+![image-20230909091432061](https://github.com/gg146/Sysolution-xixun-test/blob/master/xixun-SDK/2.Realtime%20Solution/java%20version%20(recommend)/image/%E6%96%87%E6%A1%A3%E5%9B%BE%E7%89%872.png)
 
 click Terminal control button, click advanced parameter button, password 888, enter the configuration interface (include uninstall apk and upgrade apk)
 
-![image-20230909091504079](https://github.com/gg146/Sysolution-xixun-test-master/blob/master/xixun-SDK/2.Realtime%20Solution/java%20version%20(recommend)/image/%E6%96%87%E6%A1%A3%E5%9B%BE%E7%89%873.png)
+![image-20230909091504079](https://github.com/gg146/Sysolution-xixun-test/blob/master/xixun-SDK/2.Realtime%20Solution/java%20version%20(recommend)/image/%E6%96%87%E6%A1%A3%E5%9B%BE%E7%89%873.png)
 
 then input the realtime server 's host IP and port, default port 8081 click set
 
@@ -104,7 +104,7 @@ then input the realtime server 's host IP and port, default port 8081 click set
 
 then will see TIP message： success 
 
-![image-20230909091532803](https://github.com/gg146/Sysolution-xixun-test-master/blob/master/xixun-SDK/2.Realtime%20Solution/java%20version%20(recommend)/image/%E6%96%87%E6%A1%A3%E5%9B%BE%E7%89%874.png)
+![image-20230909091532803](https://github.com/gg146/Sysolution-xixun-test/blob/master/xixun-SDK/2.Realtime%20Solution/java%20version%20(recommend)/image/%E6%96%87%E6%A1%A3%E5%9B%BE%E7%89%874.png)
 
 after connecting success, realtime server interface will show following information 
 
