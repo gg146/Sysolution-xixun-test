@@ -1,0 +1,55 @@
+{
+  "preDownloadURL":"http://www.m2mled.net/file/download?id=",
+  "_type":"PlayXixunTask",
+  "sendTo":"yzd-player",
+  "id":"56623f42-54f1-49fd-8f7f-12b10193522a",
+  "notificationURL":"http://192.168.2.11:8082/getJSON",
+  "task":{
+    "name":"audio program",
+    "_id":"bf58063d-e850-45fa-bc9c-41da267e18c4",
+    "insert":false,
+    "items":[
+      {
+        "_id":"71513064-1e6c-4a3d-87cc-2fc29a00e78e",
+        "_program":{
+          "totalSize":315859,
+          "name":"audio program",
+          "width":128,
+          "layers":[
+            {
+              "sources":[
+                {
+			"maxPlayTime": 13,
+			"_type": "Audio",
+			"md5": "acf028d072f092d7c291244cc53be778",
+			"name": "98k.mp3",
+			"size": 315859,
+			"url": "https://www.ledaips.com/file/download?id=64918248f88723de355ed96c",
+			"fileExt": ".mp3",
+			"id": "64918248f88723de355ed96c",
+			"playTime": 0,
+			"timeSpan": 13,
+			"left": 0,
+			"top": 0,
+			"width": 64,
+			"height": 64,
+			"entryEffect": "None",
+			"exitEffect": "None",
+			"entryEffectTimeSpan": 0,
+			"exitEffectTimeSpan": 0
+		}
+              ],
+              "repeat":false
+            }
+          ],
+          "_id":"8d951790-93d2-46b1-b9c7-4d1a07bb2976",
+          "height":256
+        },
+        "repeatTimes":1,
+        "schedules":[
+          
+        ]
+      }
+    ]
+  }
+}

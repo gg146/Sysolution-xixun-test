@@ -1,0 +1,50 @@
+{
+  "preDownloadURL":"http://www.m2mled.net/file/download?id=",
+  "_type":"PlayXixunTask",
+  "sendTo":"yzd-player",
+  "id":"56623f42-54f1-49fd-8f7f-12b10193522a",
+  "notificationURL":"http://192.168.2.11:8082/getJSON",
+  "task":{
+    "name":"Gif dynamic graph",
+    "_id":"bf58063d-e850-45fa-bc9c-41da267e18c4",
+    "insert":true,
+    "items":[
+      {
+        "_id":"71513064-1e6c-4a3d-87cc-2fc29a00e78e",
+        "_program":{
+          "totalSize":522377,
+          "name":"Gif dynamic graph",
+          "width":128,
+          "layers":[
+            {
+              "sources":[
+                {
+                  "_type":"Image",
+                  "md5":"9baaee1424433cb810463d195c6d990d",
+                  "name":"c71c9a111f3d11c08d5bd00cbc29aef0.gif",
+                  "mime":"image/gif",
+                  "size":522377,
+                  "fileExt":".gif",
+                  "id":"60b61f8d52f237932b4a2fec",
+                  "playTime":0,
+                  "timeSpan":9,
+                  "left":0,
+                  "top":0,
+                  "width":128,
+                  "height":256
+                }
+              ],
+              "repeat":false
+            }
+          ],
+          "_id":"8d951790-93d2-46b1-b9c7-4d1a07bb2976",
+          "height":256
+        },
+        "repeatTimes":1,
+        "schedules":[
+          
+        ]
+      }
+    ]
+  }
+}

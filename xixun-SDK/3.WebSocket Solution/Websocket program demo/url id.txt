@@ -1,0 +1,50 @@
+{
+  "preDownloadURL":"http://8.136.4.199/upload/",
+  "_type":"PlayXixunTask",
+  "sendTo":"yzd-player",
+  "id":"56623f42-54f1-49fd-8f7f-12b10193522a",
+  "notificationURL":"http://192.168.2.12:8083/getJSON",
+  "task":{
+    "name":"Picture rotation",
+    "_id":"bf58063d-e850-45fa-bc9c-41da267e18c4",
+    "insert":true,
+    "items":[
+      {
+        "_id":"71513064-1e6c-4a3d-87cc-2fc29a00e78e",
+        "_program":{
+          "totalSize":22490,
+          "name":"Picture rotation",
+          "width":128,
+          "layers":[
+            {
+              "sources":[
+                {
+                  "_type":"Image",
+                  "md5":"727cd885cac14da50184628bbd86738b",
+                  "name":"fengye.jpg",
+                  "mime":"image/jpeg",
+                  "size":22490,
+                  "fileExt":".jpg",
+                  "id":"fengye.jpg",
+                  "playTime":0,
+                  "timeSpan":10,
+                  "left":0,
+                  "top":0,
+                  "width":128,
+                  "height":256
+                }
+              ],
+              "repeat":false
+            }
+          ],
+          "_id":"8d951790-93d2-46b1-b9c7-4d1a07bb2976",
+          "height":256
+        },
+        "repeatTimes":1,
+        "schedules":[
+          
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+            "notificationURL": "http://192.168.2.11:8082/getJSON",
+            "task": {
+                "name": "Video",
+                "_id": "6007d65eb4ce829b1fef28f4",
+                "insert":true,
+                "items": [
+                    {
+                        "repeatTimes": 1,
+                       "schedules":[],
+                        "_id": "9146b44e-7fe4-4098-b858-f2499b88d0ac",
+                        "_program": {
+                            "totalSize": 3617267,
+                            "name": "Video",
+                            "width": 192,
+                            "layers": [
+                                {
+                                    "sources": [
+                                        {
+                                            "entryEffectTimeSpan": 0,
+                                            "_type": "Video",
+                                            "exitEffect": "None",
+                                            "entryEffect": "None",
+                                            "top": 0,
+                                            "size": 3617267,
+                                            "left": 0,
+                                            "name": "600a297fa480eb3121a02823.mp4",
+                                            "width": 192,
+                                            "playTime": 0,
+                                            "timeSpan": 79,
+                                            "lineHeight": 0,
+                                            "id": "600a297fa480eb3121a02823",
+                                            "exitEffectTimeSpan": 0,
+                                            "height": 288,
+                                            "md5": "600a297fa480eb3121a02823"
+                                        }
+                                    ],
+                                    "repeat": false
+                                }
+                            ],
+                            "_id": "600a297fa480eb3121a02823",
+                            "height": 288
+                        }
+                    }
+                ]
+            },
+            "preDownloadURL": "http://www.m2mled.net/file/download?id=",
+            "_type": "PlayXixunTask",
+	    "sendTo": "yzd-player", 
+            "id": "600a297fa480eb3121a02823"
+        }

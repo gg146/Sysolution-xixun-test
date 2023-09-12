@@ -1,0 +1,50 @@
+{
+  "preDownloadURL":"http://www.m2mled.net/file/download?id=",
+  "_type":"PlayXixunTask",
+  "sendTo":"yzd-player",
+  "id":"56623f42-54f1-49fd-8f7f-12b10193522a",
+  "notificationURL":"http://192.168.2.11:8082/getJSON",
+  "task":{
+    "name":"Picture rotation",
+    "_id":"bf58063d-e850-45fa-bc9c-41da267e18c4",
+    "insert":true,
+    "items":[
+      {
+        "_id":"71513064-1e6c-4a3d-87cc-2fc29a00e78e",
+        "_program":{
+          "totalSize":46386,
+          "name":"Picture rotation",
+          "width":128,
+          "layers":[
+            {
+              "sources":[
+                {
+                  "id":"",
+                  "name":"Todey",
+                  "_type":"Weather",
+                  "city":"Shanghai",
+                  "lineHeight":1,
+                  "html":"Todey：%{arr.0.date}<br>real-time temperature：%{current}℃<br>air quality：%{aqi}<br>%{arr.0.img-32-32}%{arr.0.type}<br>highest:%{arr.0.high}℃ minimum：%{arr.0.low}℃<br>%{arr.0.fx} %{arr.0.fl}",
+                  "playTime":0,
+                  "timeSpan":10,
+                  "left":0,
+                  "top":0,
+                  "width":128,
+                  "height":256,
+                  "code":101020100
+                }
+              ],
+              "repeat":false
+            }
+          ],
+          "_id":"8d951790-93d2-46b1-b9c7-4d1a07bb2976",
+          "height":256
+        },
+        "repeatTimes":1,
+        "schedules":[
+          
+        ]
+      }
+    ]
+  }
+}

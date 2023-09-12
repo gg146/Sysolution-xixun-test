@@ -1,0 +1,38 @@
+{
+    "preDownloadURL": "http://www.m2mled.net/file/download?id=",
+    "_type": "PlayXixunTask",
+    "sendTo": "yzd-player",
+    "id": "1799b913-d6c9-46ba-a885-70f14ac69bb3",
+    "notificationURL": null,
+    "task": {
+        "name": "weburlTest",
+        "_id": "8c59a1ab-3186-4138-bfb3-cab8fa7bc7f6",
+        "insert": true,
+        "items": [{
+            "_id": "06821fa7-9fc8-46d3-9c99-566bbd84251f",
+            "_program": {
+                "totalSize": 0,
+                "name": "weburlTest",
+                "width": 128,
+                "_id": "292c53ee-585e-4dac-9160-b9d2a2e302c8",
+                "height": 256,
+                "layers": [{
+                    "repeat": false,
+                    "sources": [{
+                        "name": "webURL123",
+                        "_type": "WebURL",
+                        "url": "https://www.baidu.com",
+                        "playTime": 0,
+                        "timeSpan": 10,
+                        "left": 0,
+                        "top": 0,
+                        "width": 128,
+                        "height": 256
+                    }]
+                }]
+            },
+            "repeatTimes": 1,
+            "schedules": []
+        }]
+    }
+}

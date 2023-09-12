@@ -1,0 +1,65 @@
+{
+  "preDownloadURL":"http://www.m2mled.net/file/download?id=",
+  "_type":"PlayXixunTask",
+  "sendTo":"yzd-player",
+  "id":"56623f42-54f1-49fd-8f7f-12b10193522a",
+  "notificationURL":"http://192.168.2.11:8082/getJSON",
+  "task":{
+    "name":"Picture rotation",
+    "_id":"bf58063d-e850-45fa-bc9c-41da267e18c4",
+    "insert":true,
+    "items":[
+      {
+        "_id":"71513064-1e6c-4a3d-87cc-2fc29a00e78e",
+        "_program":{
+          "totalSize":46386,
+          "name":"Picture rotation",
+          "width":128,
+          "layers":[
+            {
+              "sources":[
+                {
+                  "_type":"Image",
+                  "md5":"727cd885cac14da50184628bbd86738b",
+                  "name":"3867631debc77f1bcfb22e606db6f61 (1).jpg",
+                  "mime":"image/jpeg",
+                  "size":22490,
+                  "fileExt":".jpg",
+                  "id":"609c8c457306a5f52274efe5",
+                  "playTime":0,
+                  "timeSpan":10,
+                  "left":0,
+                  "top":0,
+                  "width":128,
+                  "height":256
+                },
+                {
+                  "_type":"Image",
+                  "md5":"334586b1484653539bc59081c51a6314",
+                  "name":"7d2269c59707aefe8866addd2d4dac0.jpg",
+                  "mime":"image/jpeg",
+                  "size":23896,
+                  "fileExt":".jpg",
+                  "id":"609c8c3a7306a5f52274ee97",
+                  "playTime":10,
+                  "timeSpan":10,
+                  "left":0,
+                  "top":0,
+                  "width":128,
+                  "height":256
+                }
+              ],
+              "repeat":false
+            }
+          ],
+          "_id":"8d951790-93d2-46b1-b9c7-4d1a07bb2976",
+          "height":256
+        },
+        "repeatTimes":1,
+        "schedules":[
+          
+        ]
+      }
+    ]
+  }
+}
