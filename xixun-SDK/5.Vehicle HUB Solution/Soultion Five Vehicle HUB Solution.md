@@ -1,6 +1,6 @@
 # Soultion Five: Vehicle HUB Solution
 
-![image-20240708172142786](../2.Realtime Solution/java version (recommend)/image/12.jpg)
+![image-20240708172142786](https://github.com/gg146/Sysolution-xixun-test/blob/master/xixun-SDK/2.Realtime%20Solution/java%20version%20(recommend)/image/12.jpg?raw=true)
 
 ##### Solution Introduction
 
