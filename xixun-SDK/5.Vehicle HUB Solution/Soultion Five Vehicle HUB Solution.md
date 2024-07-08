@@ -1,6 +1,6 @@
 # Soultion Five: Vehicle HUB Solution
 
-![image-20240708172142786](..\2.Realtime Solution\java version (recommend)\image\12.jpg)
+![image-20240708172142786](../2.Realtime Solution/java version (recommend)/image/12.jpg)
 
 ##### Solution Introduction
 
