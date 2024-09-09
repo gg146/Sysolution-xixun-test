@@ -1,490 +1,591 @@
-# xixunPlayer program JSON instructions
+# WebSocket Solution Program Demo
 
-### To explain necessary properties of video, image, Flash, single/mutil line text, digital clock, countdown and weather forecast materials supported by xixunplayer, please refer to following content:
+### 1. Instructions of sending program
 
-```java
-
-Recommend to retain the properties not explained in this document, please ignore the properties not quoted in this document. 
+```
 {
-	//realtime interface command type，to note xixunplayer to display information, content is fixed,case sensitivity
-    "type":"commandXixunPlayer",
-	//command data
-    "command":{
-		//xixunplayer command type，to display program, content is fixed,case sensitivity        "_type":"PlayXixunTask",
-		//id must has irrepeat content
-        "id":"3be5e443-d025-4f8d-b708-62ac89c5b5fe", 
-		//preDownloadURL property very important, xixunplayer will connect preDownloadURL and source id property in program through character string to constitute a valid //http download link. If preDownloadURL property not correct then can not download the image or video file. 
-
-		//TIPS：if not use preDownloadURL+id as url to download file, then can add url property in source ofVideo、Image、Flash materials to specify the download path.
-        "preDownloadURL":"https://m2mled.net/file/download?id=",
-		//notificationURL property will be used to note customer server of program download process. If not set this property then customer will has no idea of download status. 
-		//data format of download process, please refer to protocolC document
-        "notificationURL":"",
-		//program task data
-        "task":{
-			//_id must has irrepeat content
-            "_id":"55f5b637-a529-4807-8063-deeb3c12f9ab",
-			//program name
-            "name":"demo",
-			// belonging department, can be null or empty character string
-            "_department":null,
-			//a task contains more than one programs, each program corresponds one item, play rules sorted by time first, if time same then sort by priority property value from small to large (value small display first)
-            "items":[
+  "preDownloadURL":"http://www.ledaips.com/file/download?id=",//Material link, used to concatenate the IDs in the source to form a complete link for device download of materials. Alternatively, this parameter can be omitted and a URL field can be added to the source to fill in the complete material download link. Please refer to the example section below
+  "_type":"PlayXixunTask",//Fixed string, cannot be changed
+  "id":"56623f42-54f1-49fd-8f7f-12b10193522a",//The device will save the program's unique ID value to the device, which can be assigned a random string
+  "notificationURL":"http://192.168.2.11:8082/getJSON",//Post function address, used to receive program download progress
+  "sendTo":"yzd-player",//Fixed string, cannot be changed
+  "task":{
+    "name":"测试",//Total program name
+    "_id":"bf58063d-e850-45fa-bc9c-41da267e18c4",//Verify command ID, can be assigned a random string
+    "insert":false,//Is it an insert program
+    "items":[{
+        "_id":"71513064",//Verify command ID, can be assigned a random string
+        "_program":{
+          "totalSize":489496,//The total byte size of all materials in this program must be accurate and error free
+          "name":"图片2",//program name
+          "width":64,//program width
+          "layers":[
+            {
+              "sources":[
                 {
-					//_id must has irrepeat content
-                    "_id":"0d10f114-b93d-4eb7-a1a7-60311eeab6b2",
-					//program data
-                    "_program":{
-						//_id must has irrepeat content
-                        "_id":"5c909eca4477c9247940613b",
-						//cumulative sum of each material’s size property in current programs’ sources array
-                        "totalSize":14545722,
-						//program name
-                        "name":"name",
-						//program window width and height
-                        "width":300,
-                        "height":240,
-						//company id，not important, can be randomly if not use AIPS platform
-                        "_company":"alahover",
-						//department id，not important, can be randomly if not use AIPS platform
-                        "_department":"539eaaedb6e1232a1566d9c2",
-						// role id，not important, can be randomly if not use AIPS platform
-
-                        "_role":"539eaaedb6e1232a1566d9c3",
-						//user，not important, can be randomly if not use AIPS platform
-                        "_user":"yzd",
-						//program version type,default 0, no need modify, will be modified by xixunplayer 
-                        "__v":0,
-						//layer is the time axis for program editing in AIPS platform, for play content in layers, can preview effect in AIPS platform
-                        "layers":[
-                            {
-								//some repeat=true，sources of current layer will repeat play according to the longest layer, normally set false
-                                "repeat":false,
-								//material data
-                                "sources":[
-                                    {
-										//video play duration, can ignore, xixunplayer not use this value
-                                        "maxPlayTime":7,
-										//material is video type, must be Video, case sensitivity 
-                                        "_type":"Video",
-										//video file content MD5 value                                        "md5":"eb2415b138b3c2a5984db4d57652f4c9",
-										//video name
-                                        "name":"iphone.MOV",
-										//mp4 file, please use "video/mp4"
-                                        "mime":"video/quicktime",
-										//material file size, unit bytes
-                                        "size":14237682,
-										//6 properties in below can ignore, xixunplayer not use
-                                        "enabled":true,
-                                        "enabledBy":"check",
-                                        "mediaGroup":null,
-                                        "deletedBy":null,
-                                        "deleted":null,
-                                        "newName":null,
-										//platform file store path, can be empty character string
-                                        "oldFilePath":"/home/xixun/upload/alahover/20191/5c6f81b6d17fe59b436f5257",
-										//file extension name, can be empty string
-                                        "fileExt":".MOV",
-										//material id，can not be empty, can not repeat with other id
-                                        "id":"5c6f81b6d17fe59b436f5257",
-										//start time in time axis , unit second
-                                        "playTime":10,
-										//play duration time, unit second
-                                        "timeSpan":7,
-										//top left coordinate of material, unit pixel
-                                        "left":0,
-                                        "top":0,
-										//width and height of material, unit pixel
-                                        "width":150,
-                                        "height":120,
-										//enter and exit effect, please refer to appendix1
-                                        "entryEffect":"None",
-                                        "exitEffect":"None",
-										//duration of enter and exit effect, unit second
-                                        "entryEffectTimeSpan":0,
-                                        "exitEffectTimeSpan":0
-                                    },
-                                    {
-										//material is image type, must be Image, case sensitivity
-                                        "_type":"Image",
-										//file content MD5 value
-                                        "md5":"43103948f8bf4418e54819552cd18b5e",
-										//material name
-                                        "name":"1234.jpg",
-										//GIF use"image/gif"
-                                        "mime":"image/jpeg",
-										//material file size, unit bytes
-                                        "size":3370,
-										//following properties same like that of Video
-                                        "enabled":true,
-                                        "enabledBy":"test1",
-                                        "mediaGroup":null,
-                                        "deletedBy":null,
-                                        "deleted":null,
-                                        "newName":null,
-                                        "oldFilePath":"/home/xixun/upload/alahover/201811/5c122925a62960b53ca66dd9",
-                                        "fileExt":".jpg",
-                                        "id":"5c122925a62960b53ca66dd9",
-                                        "playTime":0,
-                                        "timeSpan":10,
-                                        "left":0,
-                                        "top":0,
-                                        "width":150,
-                                        "height":120,
-                                        "entryEffect":"None",
-                                        "exitEffect":"None",
-                                        "entryEffectTimeSpan":0,
-                                        "exitEffectTimeSpan":0
-                                    },
-                                    {
-										//material id，can not be empty and can not repeat with other id 
-                                        "id":"555d5adc1c0170327ff45b93",
-                                        "name":"001",
-										//material is analog clock, must be AnalogClock,case sensitivity 
-                                        "_type":"AnalogClock",
-										//__TODO to be determined
-                                        "shade":0,
-                                        "opacity":1,
-                                        "showBg":true,
-                                        "bgColor":"#482c51",
-                                        "showHourScale":true,
-                                        "scaleHourColor":"#12229c",
-                                        "showMinScale":true,
-                                        "scaleMinColor":"#3bc73b",
-                                        "scaleStyle":3,
-                                        "showScaleNum":true,
-                                        "pinStyle":1,
-                                        "pinHourColor":"#ff0000",
-                                        "pinMinColor":"#00ffd2",
-                                        "pinSecColor":"#fbca00",
-                                        "showSecond":true,
-										//following properties are the same with those ofVideo
-                                        "playTime":17,
-                                        "timeSpan":10,
-                                        "left":0,
-                                        "top":0,
-                                        "width":150,
-                                        "height":120,
-                                        "entryEffect":"None",
-                                        "exitEffect":"None",
-                                        "entryEffectTimeSpan":0,
-                                        "exitEffectTimeSpan":0
-                                    },
-                                    {
-										//digital clock material id，can be empty, can set value
-                                        "id":"",
-                                        "name":"DigitalClock",
-										//material is digital clock type, must be DigitalClock，case sensitivity
-                                        "_type":"DigitalClock",
-										//content needs to be playe，html format，
-										//placeholder meanings：%y:year,%M:month(digital, case sensitivity),%Mw:month( text, case sensitivity),%d:day,%w:week,%H:hour(24 hour ,case sensitivity),%h:hour (12 hour),%am:morning time or afternoon time,%m:minute,%s:second,
-                                        "html":"%w, %Mw %d %y<br />%h:%m:%s %am",
-										//line height
-                                        "lineHeight":1.4,
-										//show the corresponding time zone of current time
-                                        "timezone":8,
-										//can choose cn，en，pt-BR，fr
-                                        "language":"en",
-										//following properties same with those of Video
-                                        "playTime":27,
-                                        "timeSpan":10,
-                                        "left":0,
-                                        "top":0,
-                                        "width":150,
-                                        "height":120,
-                                        "entryEffect":"None",
-                                        "exitEffect":"None",
-                                        "entryEffectTimeSpan":0,
-                                        "exitEffectTimeSpan":0
-                                    },
-                                    {
-										//countdown material id，can be empty, can set value
-                                        "id":"",
-                                        "name":"Countdown",
-										//material is countdown type, must be Countdown，case sensitivity
-                                        "_type":"Countdown",
-										//line height
-                                        "lineHeight":1.4,
-										//target time
-                                        "time":"2014-5-1 10:30",
-										//show information，html format，place holder meanings：%d:rest days,%h:rest hours,%m:rest minutes,%s:rest seconds
-                                        "html":"Remain<br />%dDay%hHours%mMins%sSecs",
-										//following properties same with those of Video
-                                        "playTime":37,
-                                        "timeSpan":10,
-                                        "left":0,
-                                        "top":0,
-                                        "width":150,
-                                        "height":120,
-                                        "entryEffect":"None",
-                                        "exitEffect":"None",
-                                        "entryEffectTimeSpan":0,
-                                        "exitEffectTimeSpan":0
-                                    },
-                                    {
-										//single line material id，can be empty, can set value
-                                        "id":"",
-                                        "name":"SingleText",
-										//material is single line text type, must be SingleLineText，case sensitivity
-                                        "_type":"SingleLineText",
-										//line height
-                                        "lineHeight":1.4,
-										//text move speed, means text move from begin to end in the specified time, value bigger, speed slower, unit second
-                                        "speed":20,
-										//text content，html format
-                                        "html":"Please write something...",
-										//following properties are the same with those ofVideo
-                                        "playTime":47,
-                                        "timeSpan":10,
-                                        "left":0,
-                                        "top":0,
-                                        "width":150,
-                                        "height":120,
-                                        "entryEffect":"None",
-                                        "exitEffect":"None",
-                                        "entryEffectTimeSpan":0,
-                                        "exitEffectTimeSpan":0
-                                    },
-                                    {
-										//background color，a is transparent value
-                                        "backgroundColor":"rgba(0,0,0,1)",
-										//multi-line text material id，can be empty, can set value
-                                        "id":"",
-                                        "name":"MultiText",
-										//material is multi-line text, must be MultiLineText，case sensitivity
-                                        "_type":"MultiLineText",
-										//turn the page waiting time，unit second
-                                        "speed":10,
-										//text line height
-                                        "lineHeight":1.4,
-										//text center or not
-                                        "center":true,
-										//multi-line content，html format
-                                        "html":"<p>First Page：<br />temperature:%c℃(%f℉)</p>",
-										//following properties are the same with those ofVideo
-                                        "playTime":57,
-                                        "timeSpan":10,
-                                        "left":0,
-                                        "top":0,
-                                        "width":150,
-                                        "height":120,
-                                        "entryEffect":"None",
-                                        "exitEffect":"None",
-                                        "entryEffectTimeSpan":0,
-                                        "exitEffectTimeSpan":0,
-										//following two properties can ignore, xixunplayer not use
-                                        "sUrl":"",
-                                        "sInterval":0
-                                    },
-                                    {
-										//sensor material id，can be empty, can set value
-                                        "id":"",
-                                        "name":"Sensor",
-										//material is sensor data type, must be MultiLineText，case sensitivity
-                                        "_type":"MultiLineText",
-										//turn the page waiting time, unit second
-                                        "speed":10,
-										//text line height
-                                        "lineHeight":1.4,
-										//text center or not
-                                        "center":true,
-										//text content，html format
-                                        "html":"<p>temperature:%c℃(%f℉)</p>",
-										following properties are the same with those ofVideo
-                                        "playTime":67,
-                                        "timeSpan":10,
-                                        "left":0,
-                                        "top":0,
-                                        "width":150,
-                                        "height":120,
-                                        "entryEffect":"None",
-                                        "exitEffect":"None",
-                                        "entryEffectTimeSpan":0,
-                                        "exitEffectTimeSpan":0,
-										//following two properties can ignore, xixunplayer not use
-                                        "sUrl":"",
-                                        "sInterval":0,
-										//background color，a is transparent value
-                                        "backgroundColor":"rgba(0, 0, 0, 0)"
-                                    },
-                                    {
-										//material is Flash type，must be Flash，case sensitivity
-                                        "_type":"Flash",
-										//flash file content MD5 value
-                                        "md5":"f8b875a75a9231c7f9632cd5ce3af485",
-										//material name
-                                        "name":"download.swf",
-										//mime type，flash use this character string
-                                        "mime":"application/x-shockwave-flash",
-										//file size, unit bytes
-                                        "size":304670,
-										//following 6 properties can ignore,xixunplayer not use
-                                        "enabled":true,
-                                        "enabledBy":"yzd",
-                                        "mediaGroup":null,
-                                        "deletedBy":null,
-                                        "deleted":null,
-                                        "newName":null,
-										//platform file store path, can be empty character string 
-                                        "oldFilePath":"/home/xixun/upload/alahover/20165/57708d39342b5da0102f82c6",
-										//file extension name, can not be empty, please set as flash extension name
-                                        "fileExt":".swf",
-										//id must be irrepeat content
-                                        "id":"57708d39342b5da0102f82c6",
-										//following properties are the same with those of Video
-                                        "playTime":77,
-                                        "timeSpan":10,
-                                        "left":0,
-                                        "top":0,
-                                        "width":150,
-                                        "height":120,
-                                        "entryEffect":"None",
-                                        "exitEffect":"None",
-                                        "entryEffectTimeSpan":0,
-                                        "exitEffectTimeSpan":0
-                                    },
-                                    {
-										//weather forecast material id，can be empty, can set value
-                                        "id":"",
-                                        "name":"today",
-										//material is weather forecast type, must be Weather，case sensitivity
-                                        "_type":"Weather",
-										//city name，support almost all cities in China
-                                        "city":"Shanghai",
-										//text line height
-                                        "lineHeight":1,
-										//show content，html format
-										//%{current}:current temperature
-										//%{aqi}:AQI（air quality index）
-										//%{arr.0.date}:date（include realtime temperature）
-										//%{arr.0.type}:weather condition of the day
-										//%{arr.0.high}:maximum temperature of the day
-										//%{arr.0.low}:Minimum temperature of the day
-
-										//%{arr.0.fx}:wind direction of the day
-										//%{arr.0.fl}:wind power of the day
-										//%{arr.0.img-32-32}:weather condition image of the day，format：img-width-height(blue)，img2-width-height（gray）
-										//all yesterday in { } in above means yesterday，arr.0 means today，1 means tomorrow，2 means the day after tomorrow，3 means three days from now，4 means 4 days from now
-                                        "html":"today：%{arr.0.date}<br />realtime temperature：%{current}℃<br />air quality ：%{aqi}<br />%{arr.0.img-32-32}%{arr.0.type}<br />highest:%{arr.0.high}℃ lowest：%{arr.0.low}℃<br />%{arr.0.fx} %{arr.0.fl}",
-										//following properties are the same with those ofVideo
-                                        "playTime":87,
-                                        "timeSpan":10,
-                                        "left":0,
-                                        "top":0,
-                                        "width":150,
-                                        "height":120,
-                                        "entryEffect":"None",
-                                        "exitEffect":"None",
-                                        "entryEffectTimeSpan":0,
-                                        "exitEffectTimeSpan":0,
-										//city code，please refer to appendix 2
-                                        "code":101020100
-                                    }
-                                ]
-                            }
-                        ],
-						//create time, can be empty
-                        "dateCreated":"2019-03-19T07:48:26.984Z"
-                    },
-					//task item priority，smaller value higher priority, multiple programs in the same play time section display by this priority
-                    "priority":0,
-					//play times after get right to display according to priority
-                    "repeatTimes":1,
-					//0 is advance program，2 is simple program					//simple program can only be  Video or Image，can not specify effect，default display coordinate 0，0，material width and height default to be same as program width and height.                    "version":0,
-					//display in schedule time，date, time and week day can be setup in the same time, and logic relationship
-                    "schedules":[
-                {
-					//All no specified date
-                    "dateType":"All",
-                    "startDate":null,
-                    "endDate":null,
-					//All no specified time
-                    "timeType":"All",
-                    "startTime":null,
-                    "endTime":null,
-					//specified work days，display at Monday, Tuesday and Wednesday
-                    "filterType":"Week",
-                    "weekFilter":[
-                        1,
-                        2,
-                        3
-                    ],
-					//no specified month
-                    "monthFilter":[
-
-                    ],
-					//language, can ignore
-                    "lng":"zh-CN"
-                },
-                {
-				//All no specified date
-                    "dateType":"All",
-                    "startDate":null,
-                    "endDate":null,
-					//specified time section, display during 00:00-23：59
-                    "timeType":"Range",
-                    "startTime":"00:00",
-                    "endTime":"23:59",
-					//no specified week day            
-         "filterType":"None",
-                    "weekFilter":[
-
-                    ],
-					//no specified month
-                    "monthFilter":[
-
-                    ],
-                    "lng":"zh-CN"
-                },
-                {
-				//specified display in month
-                    "dateType":"Range",
-                    "startDate":"2019-03-03",
-                    "endDate":"2019-03-26",
-                    "timeType":"All",
-                    "startTime":null,
-                    "endTime":null,
-                    "filterType":"None",
-                    "weekFilter":[
-
-                    ],
-                    "monthFilter":[
-
-                    ],
-                    "lng":"zh-CN"
+                  "_type":"Image",//Image material type
+                  "md5":"727cd88738b",//Material md5 value, obtain the unique md5 checksum value of the file stream
+                  "name":"1",//material name
+                  "mime":"image/jpeg",
+                  "size":489496,//The byte size of the material must be accurate and error free
+                  "fileExt":".jpg",//Material suffix
+                  "url":"",//maerial path
+                  "id":"609cfe5",//Material ID, the material will be named after this ID and saved to the internal storage of the device
+                  "playTime":0,//The start playback time of the material on the timeline is set to 0 for the first image, which is equal to the playTime+timeSpan value of the previous material in the slideshow.
+                  "timeSpan":10,//The playback duration of the material on the timeline, in seconds
+                  "left":0,//The material in the program and the left margin
+                  "top":0,//The margin at the top
+                  "width":64,//material width
+                  "height":64//material height
                 }
-            ]
+              ],
+              "repeat":false//Normal assignment of false is sufficient
+            }
+          ],
+          "_id":"8d951790-93d2-46b1-b9c7-4d1a07bb2976",//Verify command ID, can be assigned a random string
+          "height":64//program height
+        },
+        "repeatTimes":1,//The number of times the program is played when it is an insert program and there is no timing parameter	
+        "schedules":[    //Timing field, refer to the timing parameter description below
+               {
+              "filterType":"None",		//necessary
+              "timeType":"Range",		//necessary
+              "startTime":"00:00",
+              "endTime":"23:59",
+              "dateType":"All"			//necessary
+            }    
+        ]
+  }
+}
+```
+
+###  1.1 schedule parameters instructions
+
+```
+dateType:(All:Unrestricted date,Range:Limited Date)
+"startDate":"2019-03-03" //Scheduled start date
+"endDate":"2019-03-26"	 //Scheduled end date
+
+timeType:(All:Unrestricted time,Range:Limited time)
+"startTime":"00:00",	//Scheduled start time
+"endTime":"23:59",		//Scheduled start timr
+
+filterType:(None:unrestricted weekday，Week:limited weekday)
+ "weekFilter":[0，1，2，3，4，5，6 ],	//Sunday is 0,Monday is 1, and so on
+```
+
+### 2. Clear up program and other data from led controller
+
+Function description: After calling this interface, all programs and downloaded program files in the control card will be completely deleted, and the player will display the default logo image.
+Sending data:
+
+```
+{
+	"cardId": "y60-620-40490",
+	"_type":"DeleteTask",
+	"sendTo":"yzd-player"
+}
+```
+
+return data
+
+```
+{
+  	"_type": "DataCallback",
+  	"result": "received command",
+  	"commandId": "61234811c4c3c90c07326ebf",
+  	"cardId": "y60-620-40490",
+  	"_cardId": "y60-620-40490"
+}
+```
+
+### 3. Demo of sending program
+
+####  3.1 Image
+
+```
+{
+  "preDownloadURL":"http://www.ledaips.com/file/download?id=",
+  "_type":"PlayXixunTask",
+  "sendTo":"yzd-player",
+  "id":"56623f42-54f1-49fd-8f7f-12b10193522a",
+  "notificationURL":"http://192.168.2.11:8082/getJSON",
+  "task":{
+    "name":"图片轮播",
+    "_id":"bf58063d-e850-45fa-bc9c-41da267e18c4",
+    "insert":false,
+    "items":[{
+        "_id":"71513064",
+        "_program":{
+          "totalSize":489496,
+          "name":"图片2",
+          "width":64,
+          "layers":[
+            {
+              "sources":[
+                {
+                  "_type":"Image",
+                  "md5":"727cd88738b",
+                  "name":"1",
+                  "mime":"image/jpeg",
+                  "size":489496,
+                  "fileExt":".jpg",
+                  "url":"https://www.ledaips.com/file/download?id=64d300120c71c21d62cd0343",
+                  "id":"609cfe5",
+                  "playTime":0,
+                  "timeSpan":10,
+                  "left":0,
+                  "top":0,
+                  "width":64,
+                  "height":64
                 }
-            ],
-			//can specified download program date and time , recommend to set null
-            "executeDate":null,
-			//command id，recommend to set valid character string, not repeat with other id
-            "cmdId":"55f5b637-a529-4807-8063-deeb3c12f9ab"
+              ],
+              "repeat":false
+            }
+          ],
+          "_id":"8d951790-93d2-46b1-b9c7-4d1a07bb2976",
+          "height":64
+        },
+        "repeatTimes":1,
+        "schedules":[]
+  }
+}
+```
+
+#### 3.2 Video
+
+```
+{
+			"preDownloadURL":"http://www.ledaips.com/file/download?id=",
+            "_type": "PlayXixunTask",
+			"sendTo": "yzd-player", 
+            "id": "600a297fa480eb3121a02823",
+            "notificationURL":"http://192.168.2.12:8083/getJSON",
+            "task": {
+                "name": "测试",
+                "_id": "6007d65eb4ce829b1fef28f4",
+                "insert":false,
+                "items": [
+                    {
+                        "_id": "9146b44e-7fe4-4098-b858-f2499b88d0ac",
+                        "_program": {
+                            "totalSize": 2040197,
+                            "name": "测试",
+                            "width": 64,
+                            "layers": [
+                                {
+                                    "sources": [
+                                        {
+                                            "entryEffectTimeSpan": 0,
+                                            "_type": "Video",
+                                            "exitEffect": "None",
+                                            "entryEffect": "None",
+                                            "top": 0,
+                                            "size": 2040197,
+                                            "left": 0,
+											"url":"http://192.168.1.142:8081/3.mp4",
+                                            "name": "600a297fa480eb3121a02823.mp4",
+                                            "width": 64,
+											"fileExt": ".mp4",
+											"mime": "video/mp4",
+                                            "playTime": 0,
+                                            "timeSpan": 31,
+                                            "lineHeight": 0,
+                                            "id": "600a297fa480eb3121a02823",
+                                            "exitEffectTimeSpan": 0,
+                                            "height": 64,
+                                            "md5": "2e7e39eaa3faa90f5d5b34536722ce49"
+                                        }
+                                    ],
+                                    "repeat": false
+                                }
+                            ],
+                            "_id": "600a297fa480eb3121a02823",
+                            "height": 64
+                        },
+						"repeatTimes": 1,
+                       "schedules":[]
+                    }
+                ]
+            }
         }
+```
+
+#### 3.3 GIF animation
+
+```
+{
+  "preDownloadURL":"http://www.ledaips.com/file/download?id=",
+  "_type":"PlayXixunTask",
+  "sendTo":"yzd-player",
+  "id":"56623f42-54f1-49fd-8f7f-12b10193522a",
+  "notificationURL":"http://192.168.2.11:8082/getJSON",
+  "task":{
+    "name":"gif动图",
+    "_id":"bf58063d-e850-45fa-bc9c-41da267e18c4",
+    "insert":true,
+    "items":[
+      {
+        "_id":"71513064-1e6c-4a3d-87cc-2fc29a00e78e",
+        "_program":{
+          "totalSize":522377,
+          "name":"gif动图",
+          "width":128,
+          "layers":[
+            {
+              "sources":[
+                {
+                  "_type":"Image",
+                  "md5":"9baaee1424433cb810463d195c6d990d",
+                  "name":"c71c9a111f3d11c08d5bd00cbc29aef0.gif",
+                  "mime":"image/gif",
+                  "size":522377,
+                  "fileExt":".gif",
+                  "id":"60b61f8d52f237932b4a2fec",
+                  "url":"",
+                  "playTime":0,
+                  "timeSpan":9,
+                  "left":0,
+                  "top":0,
+                  "width":128,
+                  "height":256
+                }
+              ],
+              "repeat":false
+            }
+          ],
+          "_id":"8d951790-93d2-46b1-b9c7-4d1a07bb2976",
+          "height":256
+        },
+        "repeatTimes":1,
+        "schedules":[
+          
+        ]
+      }
+    ]
+  }
+}
+```
+
+#### 3.4 single line text
+
+```
+{
+  "preDownloadURL":"http://www.ledaips.com/file/download?id=",
+  "_type":"PlayXixunTask",
+  "sendTo":"yzd-player",
+  "id":"56623f42-54f1-49fd-8f7f-12b10193522a",
+  "notificationURL":"http://192.168.2.11:8082/getJSON",
+  "task":{
+    "name":"单行文本",
+    "_id":"bf58063d-e850-45fa-bc9c-41da267e18c4",
+    "insert":true,
+    "items":[
+      {
+        "_id":"71513064-1e6c-4a3d-87cc-2fc29a00e78e",
+        "_program":{
+          "totalSize":0,
+          "name":"单行文本",
+          "width":128,
+          "layers":[
+            {
+              "sources":[
+                {
+                  "id":"",
+                  "name":"SingleText",
+                  "_type":"SingleLineText",
+                  "lineHeight":1.4,
+                  "speed":20,
+                  "html":"<span style=\"font-size:14px;color:#0000FF;\">Please write something...</span>",
+                  "playTime":0,
+                  "timeSpan":10,
+                  "left":0,
+                  "top":0,
+                  "width":128,
+                  "height":256
+                }
+              ],
+              "repeat":false
+            }
+          ],
+          "_id":"8d951790-93d2-46b1-b9c7-4d1a07bb2976",
+          "height":256
+        },
+        "repeatTimes":1,
+        "schedules":[
+          
+        ]
+      }
+    ]
+  }
+}
+```
+
+#### Partial parameter description
+
+```
+_type:The material is of single line text type and must be SingleLineText, case sensitive
+id: material id，Can be an empty string, can be set to a random value, and this field is indispensable
+lineHeight: line height
+speed:Text movement speed, indicating that the text moves from beginning to end within a specified time. The larger the value, the slower the speed, measured in seconds
+html:Text content, in HTML format, can be edited with inline styles for text formatting, including background color, font size, font color, etc
+```
+
+#### 3.5 Multiline text
+
+```
+{
+	"preDownloadURL": "http://www.ledaips.com/file/download?id=",
+	"_type": "PlayXixunTask",
+	"sendTo": "yzd-player",
+	"id": "56623f42-54f1-49fd-8f7f-12b10193522a",
+	"notificationURL": "http://192.168.2.11:8082/getJSON",
+	"task": {
+		"name": "多行文本",
+		"_id": "bf58063d-e850-45fa-bc9c-41da267e18c4",
+		"insert": true,
+		"items": [{
+			"_id": "71513064-1e6c-4a3d-87cc-2fc29a00e78e",
+			"_program": {
+				"_id": "64f928aee09465613d6f13cc",
+				"totalSize": 0,
+				"name": "多行文本",
+				"width": 520,
+				"height": 520,
+				"layers": [{
+					"repeat": false,
+					"sources": [{
+						"backgroundColor": "rgba(0,0,0,1)",
+						"id": "",
+						"name": "MultiText",
+						"_type": "MultiLineText",
+						"speed": 10,
+						"lineHeight": 1.4,
+						"center": false,
+						"html": "<p><span style=\"color:#DD1144;font-size:10px, Courier, &quot;background-color:#FFFFFF;\">青春本就是马不停蹄的错过和相遇。在这路遥马急的人间，谁又能记住谁几年？</span></p>",
+						"playTime": 0,
+						"timeSpan": 100,
+						"left": 0,
+						"top": 0,
+						"width": 520,
+						"height": 520,
+						"entryEffect": "None",
+						"exitEffect": "None",
+						"entryEffectTimeSpan": 0,
+						"exitEffectTimeSpan": 0,
+						"sUrl": "",
+						"sInterval": 0
+					}]
+				}]
+			}
+		}]
+	}
+}
+```
+
+Partial parameter description
+
+```
+_type:The material is of multiline text type and must be MultiLineText, case sensitive
+id:Material ID, can be an empty string, can be set to a random value, and this field is indispensable
+lineHeight:line height
+center:Is the text centered
+html:Multi line text content, in HTML format, can be edited with inline styles to include background color, font size, font color, etc. Use</br>tags to wrap the text
+```
+
+#### 3.6 Digital Clock
+
+```
+{
+  "preDownloadURL":"http://www.ledaips.com/file/download?id=",
+  "_type":"PlayXixunTask",
+  "sendTo":"yzd-player",
+  "id":"56623f42-54f1-49fd-8f7f-12b10193522a",
+  "notificationURL":"http://192.168.2.11:8082/getJSON",
+  "task":{
+    "name":"数字时钟",
+    "_id":"bf58063d-e850-45fa-bc9c-41da267e18c4",
+    "insert":true,
+    "items":[
+      {
+        "_id":"71513064-1e6c-4a3d-87cc-2fc29a00e78e",
+        "_program":{
+          "totalSize":0,
+          "name":"数字时钟",
+          "width":128,
+          "layers":[
+            {
+              "sources":[
+                {
+                  "id":"",
+                  "name":"DigitalClock",
+                  "_type":"DigitalClock",
+                  "html":"<span><span style=\"font-size:9px;\">%yyear</span><span style=\"font-size:9px;\">%Mmonth%ddate&nbsp;<br />\n%w&nbsp; %am</span></span><span style=\"font-size:9px;\"></span><br />\n<span style=\"font-size:9px;\">%H:%m:%s&nbsp;</span>",
+                  "lineHeight":1.4,
+                  "timezone":8,
+                  "language":"en",
+                  "playTime":0,
+                  "timeSpan":10,
+                  "left":0,
+                  "top":0,
+                  "width":128,
+                  "height":256,
+                  "entryEffect":"None",
+                  "exitEffect":"None",
+                  "entryEffectTimeSpan":0,
+                  "exitEffectTimeSpan":0
+                }
+              ],
+              "repeat":false
+            }
+          ],
+          "_id":"8d951790-93d2-46b1-b9c7-4d1a07bb2976",
+          "height":256
+        },
+        "repeatTimes":1,
+        "schedules":[
+          
+        ]
+      }
+    ]
+  }
+}
+```
+
+Partial parameter description
+
+```
+HTML: Content to be displayed, HTML format, placeholder meaning:% y: year,% M: month (numerical representation, note capitalization),% Mw: month (textual representation, note capitalization),% d: day,% w: week,% H: hour (24-hour format, note capitalization),% h: hour (12 hour format),% am: morning and afternoon,% m: minute,% s: second.
+Timezone: Display the time zone corresponding to the time
+Language: Language options include CN Chinese, EN English, PT BR Portuguese, FR French
+```
+
+#### 3.7 Analog clock
+
+```
+{
+  "preDownloadURL":"http://www.ledaips.com/file/download?id=",
+  "_type":"PlayXixunTask",
+  "sendTo":"yzd-player",
+  "id":"56623f42-54f1-49fd-8f7f-12b10193522a",
+  "notificationURL":"http://192.168.2.11:8082/getJSON",
+  "task":{
+    "name":"模拟时钟",
+    "_id":"bf58063d-e850-45fa-bc9c-41da267e18c4",
+    "insert":true,
+    "items":[
+      {
+        "_id":"71513064-1e6c-4a3d-87cc-2fc29a00e78e",
+        "_program":{
+          "totalSize":0,
+          "name":"模拟时钟",
+          "width":128,
+          "layers":[
+            {
+              "sources":[
+                {
+                  "id":"60b624d152f237932b4a6392",
+                  "name":"时间",
+                  "_type":"AnalogClock",
+                  "shade":0,
+                  "opacity":1,
+                  "showBg":true,
+                  "bgColor":"#ffffff",
+                  "showHourScale":true,
+                  "scaleHourColor":"#12229c",
+                  "showMinScale":true,
+                  "scaleMinColor":"#3bc73b",
+                  "scaleStyle":3,
+                  "showScaleNum":true,
+                  "pinStyle":1,
+                  "pinHourColor":"#ff0000",
+                  "pinMinColor":"#00ff00",
+                  "pinSecColor":"#fbca00",
+                  "showSecond":true,
+                  "playTime":0,
+                  "timeSpan":10,
+                  "left":0,
+                  "top":0,
+                  "width":128,
+                  "height":256
+                }
+              ],
+              "repeat":false
+            }
+          ],
+          "_id":"8d951790-93d2-46b1-b9c7-4d1a07bb2976",
+          "height":256
+        },
+        "repeatTimes":1,
+        "schedules":[
+          
+        ]
+      }
+    ]
+  }
+}
+```
+
+#### Partial parameter description
+
+```
+shade： default is 0
+opacity：opaque
+ShowBg: Display background or not
+BgColor: Background color
+ShowHourScale: Display the hour scale
+ScaleHourColor: hour scale color
+ShowMinScale: Display minute scale
+ScaleMinColor: minute scale color
+ScaleStyle: There are four options for scale styles: integer 0~3. 0 line line (both integer and minute scales are short lines), 1 point line (integer points are points, minute scales are short lines), 2 lines point (integer points are represented by short lines, minute scales are represented by dots), 3 points point (both integer and minute scales are represented by dots)
+ShowScaleNum: integer scale displays numbers
+PinStyle: pointer style, integer 1-3 (1 represents diamond, 2 represents triangle, 3 represents rectangle)
+PinHourColor: Clock pointer color
+PinMinColor: Clock minute hand color
+PinSecColor: Clock Second Hand Color
+ShowSecond: Display the second hand or not
+```
+
+#### 3.8 URL
+
+```
+{
+    "preDownloadURL": "http://www.ledaips.com/file/download?id=",
+    "_type": "PlayXixunTask",
+    "sendTo": "yzd-player",
+    "id": "1799b913-d6c9-46ba-a885-70f14ac69bb3",
+    "notificationURL": null,
+    "task": {
+        "name": "weburlTest",
+        "_id": "8c59a1ab-3186-4138-bfb3-cab8fa7bc7f6",
+        "insert": true,
+        "items": [{
+            "_id": "06821fa7-9fc8-46d3-9c99-566bbd84251f",
+            "_program": {
+                "totalSize": 0,
+                "name": "weburlTest",
+                "width": 128,
+                "_id": "292c53ee-585e-4dac-9160-b9d2a2e302c8",
+                "height": 256,
+                "layers": [{
+                    "repeat": false,
+                    "sources": [{
+                        "name": "webURL123",
+                        "_type": "WebURL",
+                        "url": "https://www.baidu.com",
+                        "playTime": 0,
+                        "timeSpan": 10,
+                        "left": 0,
+                        "top": 0,
+                        "width": 128,
+                        "height": 256
+                    }]
+                }]
+            },
+            "repeatTimes": 1,
+            "schedules": []
+        }]
     }
 }
-
-
-
-Appendix 1：effects type：fade out and zoom out can not be as enter in effects, fade in and zoom in cannot be as exit effects.
-	None,		
-	ALPHA_IN,					//fade in 
-	ALPHA_OUT,					//fade out
-	MOVING_LEFT,				//continue moving left
-	MOVING_RIGHT,				//continue moving right
-	MOVING_TOP,					//continue moving up
-	MOVING_BOTTOM,				//continue moving bottom
-	ZOOM_IN,					//zoom in
-	ZOOM_OUT,					//zoom out
-	ZOOM_IN_LEFT_BOTTOM,		//zoom in left bottom
-	ZOOM_IN_LEFT_TOP,			//zoom in left top
-	ZOOM_IN_RIGHT_TOP,			//zoom in right top
-	ZOOM_IN_RIGHT_BOTTOM,		//zoom in right bottom
-	ZOOM_OUT_LEFT_BOTTOM,		//zoom out left bottom
-	ZOOM_OUT_LEFT_TOP,			//zoom out left top
-	ZOOM_OUT_RIGHT_TOP,			//zoom out right top
-	ZOOM_OUT_RIGHT_BOTTOM,		//zoom out right bottom
-	ROTATE_RIGHT,				//rotate right
-	ROTATE_LEFT					//rotate left
 ```
 
