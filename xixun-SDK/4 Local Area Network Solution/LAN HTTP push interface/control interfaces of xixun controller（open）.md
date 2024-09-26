@@ -442,6 +442,33 @@ not open
 not open
 ```
 
+##### 5.9Query SIM information(The CardSystem needs to be upgraded to version 5.2.7.7-12 or above)
+
+```
+Example of send data command format：
+{
+	_id":"98e8d3cd47fad6ce8e3f7b8d42cb4d9b",
+	_"type":"GetsIMstatus"
+}
+Example of get data process success and return：
+{
+	"success": true,
+	"roaming": false,
+	"signalstrength": -107,
+	"simserialNumber": "89860498162190571780,
+	"type": "GetsIMstatus",
+	"datastate":2,
+	"IMEI":"860858070642921",
+    "imsi":"460081833001780",
+    "servicestate":0,
+	"phoneNumber":0,
+	"countryCode":"cn",
+	"networkType":13,
+	"state": 5,
+	" id":"98e8d3cd47fad6ce8e3f7b8d42cb4d9b"
+}
+```
+
 
 
 #### 6.Web server address and company ID*
