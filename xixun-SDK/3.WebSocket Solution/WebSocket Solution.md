@@ -4,7 +4,7 @@
 
 ## 1、Get basic information and heartbeat
 
-First, need to build up a websocket server to receive controller's basic information and heartbeat package. Second, set the websocket server address as controller's web server address via Easyboard. 
+First, need to build up a websocket server to receive controller's basic information and heartbeat package. Second, set the websocket server address as controller's web server address via LEDOK express. 
 
 Example: if arrange the websocket server in192.168.8.99：8888, then please set the controller's web server address like the below image:
 
