@@ -14,7 +14,7 @@
 
 ### 3、NOTES
 
-​	1、Should communicate in sub thread when using aidl interface;
+​	1、Should communicate in sub thread when using aidl interface; 
 
 ​	2、Aidl bind service adopt asynchronous operation, so need to judge if it is empty after getting the bind service. If not empty, then can use this interface; if empty, then need to acquire it again. 
 

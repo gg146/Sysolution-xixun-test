@@ -13,7 +13,7 @@ broadcast data format JSON，content：
 3、will receive controller answer message after sending broadcast from socket ,message content：{"cardId":"y10-116-01576",
 //serial id
 
-"brightness":255, //brightness
+"brightness":255, //brightness 
 
 "id":"01C3D4K0YFCFRZPGSZT5VXQHSS", //omit
 

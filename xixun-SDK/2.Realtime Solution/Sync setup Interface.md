@@ -12,7 +12,7 @@ send message：
 
 ```json
 { 
-    "type": "callCardService", 
+    "type": "callCardService",  
     "fn": "setTimeSync", 
     "arg1": "ntp.sjtu.edu.cn", 		//ntp server address
     "arg2": "Asia/Shanghai" 		//time zone

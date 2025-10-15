@@ -11,7 +11,7 @@
 				{
 					"name": "设置亮度",
 					"request": {
-						"method": "POST",
+						"method": "POST", 
 						"header": [],
 						"body": {
 							"mode": "raw",

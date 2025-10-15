@@ -14,7 +14,7 @@ JSON command:
     "endpoint":"http://192.168.1.254:8080/progress/IpNotification", //upload address
     "topic":"test/topic", //subscribe -- default is closed
     "interval":20, //second
-    "mode": "http" //mqtt
+    "mode": "http" //mqtt 
     }
    // "endpoint":"a35u29xs1pm2ee-ats.iot.me-central-1.amazonaws.com",
 ```

@@ -6,7 +6,7 @@
 
 Direct development of Android apk, this open method is the most flexible. Some functions need to use CardSystem's port (see xixun_card_setting.zip for details).
 
-Background knowledge：
+Background knowledge :
 
 - Knowledge of a programming language capable of developing Android (JAVA, Kotlin, Scala, etc.)
 -  Knowledge of the basics related to Android (Activity, Service, BroadcastReceiver, etc.)

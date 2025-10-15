@@ -3,7 +3,7 @@
 # 1.**Communication format**
 
 
-Serial port baud rate 9600, data bits 8bits, check bit None, stop bit 1bit, flow control None, HEX encoding, byte interval time within the same command not exceeding 100ms
+Serial port baud rate 9600, data bits 8bits, check bit None, stop bit 1bit, flow control None, HEX encoding, byte interval time within the same command not exceeding 100ms 
 
 # 2．Program control type command
 

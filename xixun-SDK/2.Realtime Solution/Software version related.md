@@ -17,7 +17,7 @@ Sample code:
 ```json
 {
 	"type":"updateAPP",
-	"appUrl":"https://m2mled.net/file/download?id=5c13839da62960b53cb07b42"    //Software package download address
+	"appUrl":"https://m2mled.net/file/download?id=5c13839da62960b53cb07b42"    //Software package download address 
 }
 ```
 

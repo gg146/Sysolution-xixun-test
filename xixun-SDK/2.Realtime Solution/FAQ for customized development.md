@@ -20,7 +20,7 @@ following is java example:
 
 ![image-getJson](../pictures/Secondarydevelopment3)
 
-it can transfer the download progress to the front-end via ajax asynchronous request, the function will also be needed for the interface of getting sensor data. By printing out the download progress, you can more effectively locate whether there are errors in the sent JSON. If download progress report 100% twice means download the resource success, program will be display, but if led display still keep blank, which means wrong resources format or too high resolution. Normally the maximum resolution for image is 1280x512, 320-720p video. 
+it can transfer the  download progress to the front-end via ajax asynchronous request, the function will also be needed for the interface of getting sensor data. By printing out the download progress, you can more effectively locate whether there are errors in the sent JSON. If download progress report 100% twice means download the resource success, program will be display, but if led display still keep blank, which means wrong resources format or too high resolution. Normally the maximum resolution for image is 1280x512, 320-720p video. 
 
 Notes: support video format 3GP and MP4, please choose Divx, Xvid, AVC/H.264 encoding for MP4, other encoding formats will create error!Please convert the video source file into proper resolution, or into standard 320p~720p, if video width resolution exceed 1280 or higher than 1080 will create error! Player only suport RBG(not CMYK) image.
 

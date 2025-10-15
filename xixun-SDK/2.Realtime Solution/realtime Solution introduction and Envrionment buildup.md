@@ -7,7 +7,7 @@ Based on Sysolution Realtime SDK, using web technology and http communication (b
 Necessary Preparation：
 
 - Know html+css
-- Be good at JavaScript
+- Be good at JavaScript 
 - At least know one back-end develop language（C#, JAVA, PHP, nodejs,etc）
 
 ## 1.1、Realtime Diagram

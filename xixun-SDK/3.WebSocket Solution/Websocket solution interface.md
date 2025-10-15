@@ -9,7 +9,7 @@ The data sent by following interface are all Json field;
 // request failed and return data
 {
   "_type":"Error",
-  "cardId":"y10-116-01576",
+  "cardId":"y10-116-01576", 
   "commandId":null,
   "errorMessage":"CommandType Do Not Exist"
 }

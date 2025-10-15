@@ -43,7 +43,7 @@ originally it is LAN interface document, now unify together for other visiting m
     {
     	"type": "callCardService",
     	"fn": "executeJsonCommand",
-    	"arg1":""
+    	"arg1":"" 
     }
     ```
 
@@ -56,7 +56,7 @@ originally it is LAN interface document, now unify together for other visiting m
     	"type": "callCardService",
     	"fn": "executeJsonCommand",
     	"arg1":"{
-                \"_id\": \"98e8d3cd47fad6ce8e3f7b8d42cb4d9b\",
+                \"_id\": \"98e8d3cd47fad6ce8e3f7b8d42cb4d9b\", ,
                 \"_type\": \"GetCardName\"
     			}"
     }

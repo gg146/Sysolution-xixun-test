@@ -7,7 +7,7 @@ cardsystem：this is core application, it is the basement of all underlying func
 conn：this is communication function, keep the communication between controller and web portal
 xixunplayer：player function, for display all contents. 
 
-update：updating function, for update core applications.
+update：updating function, for update core applications. 
 
 
 （1）APK solution: directly develope third party APK, this is the most flexiable solution, which means customer can develop own APK and running in xixun controller, no need to use xixunplayer. xixun company will provide jar package to call functions like adjust brightness. while for communication, customer can choose to communicating with own server. must to uninstall xixunplayer in advance then install own APK. 

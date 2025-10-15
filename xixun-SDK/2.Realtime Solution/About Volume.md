@@ -12,7 +12,7 @@ send message：
 
 ```json
 { 
-    "type": "callCardService", 
+    "type": "callCardService" , 
     "fn": "setVolume", 
     "arg1": 10 				//Volume value, numerical range 0-15
 } 

@@ -19,7 +19,7 @@
 **can judge room not enough and other operations after receiving command, return JSON character string if has error**
 
 ```json
-{"_type":"Error","errorMessage":"xxxx"}
+{"_type":"Error","errorMessage":"xxxx"} 
 ```
 
 **return JSON character string if no error**

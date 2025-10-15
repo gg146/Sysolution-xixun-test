@@ -15,7 +15,7 @@ public class TaskToSetBrightness {
 //scheudled items
 public class TaskItemToSetBrightness {
    public int brightness;  //brightness value for scheduled time 
-   public List<Schedule> schedules; //scheduled time
+   public List<Schedule> schedules; //scheduled time 
 }
 public class Schedule {
    public DateType dateType; //if this item value equals to DateType.Range，means scheduled time range from  startDate to endDate。 If this item value equals to DateType.All, means the date range : permanent 

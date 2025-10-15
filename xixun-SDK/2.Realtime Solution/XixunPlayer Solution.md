@@ -2,7 +2,7 @@
 
 # XixunPlayer Solution
 
-## 1、Instructions
+## 1、Instructions 
 
 This solution is the recommend method, using Sysolution 's "xixunplayer"  to  publish content and display. support all screens display the same content synchronously, support single text, multiline text, image, video, audio, weather forecast, environment measure(temperature, humidity, wind speed, wind direction, pm2.5, pm10), analog clock , digital clock, countdown and  etc .
 

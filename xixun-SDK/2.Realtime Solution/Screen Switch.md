@@ -14,7 +14,7 @@ send message：
 { 
     "type": "callCardService", 
     "fn": "setScreenOpen",
-    "arg1": true 							//boolean type，true on ，fasle off
+    "arg1": true 							//boolean type，true on ，fasle off 
 } 
 ```
 

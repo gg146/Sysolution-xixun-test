@@ -41,7 +41,7 @@ Send a message:
 ```json
 {
     "type":"callLiveService",
-    "_type":"StopLiveVideo"    
+    "_type":"StopLiveVideo"     
 }
 ```
 

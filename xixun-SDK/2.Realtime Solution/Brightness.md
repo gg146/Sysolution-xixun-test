@@ -6,7 +6,7 @@
 
 #### Applied for：adjust led display brightness level through manual or schedule
 
-## 1、set brightness
+## 1、set brightness 
 
 send message：
 

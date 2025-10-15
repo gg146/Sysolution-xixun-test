@@ -6,7 +6,7 @@
 
 #### applied for ：Get controller relative information, readback screenshot and restart system
 
-## 1、Restart
+## 1、Restart 
 
 Send message：
 

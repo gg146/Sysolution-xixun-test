@@ -8,5 +8,5 @@
 
 ### Instructions:
 
-### copy res folder to the root of Disk C before running the project. This folder contains program template file and  necessary image and video. 
+### copy res folder to the root of Disk C before running the project. This folder contains program template file and  necessary image and video.  
 

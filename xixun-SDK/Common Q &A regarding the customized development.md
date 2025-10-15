@@ -5,7 +5,7 @@
 1. Solution 1 is develop own APP, directly install into sysolution controller, so that your own platform can control the APP to publish content. Of course, need to uninstall controller's xixunplayer app. 
 2. Solution 2 is the Sysolution Realtime Server, so that customer can build up the realtime server in the LINUX or Windows in LAN or WAN freely, just need to docking the functions API then can use it. It will cost less development time, for simple functions, can be done within one week time. 
 3. Solution 3 is develop websocket server and connect to the sysolution controller. All the API are the same of AIPS2.0  platform, which means all the functions supported by AIPS2.0 can be realized in websocket server. But this will cost long development time and more works, belong to deeply customized development. 
-4. Solution 4 is LAN solution, customer can push the content through TCP type and call Sysolution controller Interface by HTTP type. 
+4. Solution 4 is LAN solution, customer can push the content through TCP type and call Sysolution controller Interface by HTTP type.  
 
 ##### what numbers stand for in xixunplayer? (xixunplayer version below 1600 will have numbers)
 

@@ -14,7 +14,7 @@
 
 &ensp;&ensp;&ensp;&ensp;b).  **adopting HTTP POST communication way to setup and get normal parameters, sending content and receiving return content are all JSON character string (contentType property set as text/plain), please use /settings as path if there is no special note.** 
 
-&ensp;&ensp;&ensp;&ensp;c).  **upload and download files through HTTP POST way.**
+&ensp;&ensp;&ensp;&ensp;c).  **upload and download files through HTTP POST way. **
 
 ## 3、**Interfaces descriptions**
 
