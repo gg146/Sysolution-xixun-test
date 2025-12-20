@@ -48,6 +48,7 @@ example codes：
                     "id":"5s.jpg",//Material ID, which will be named and saved to internal storage on the device
                     "playTime":0,//The start playback time of the material on the timeline, set to 0 for the first image, and in the rotation, this value is equal to the playTime+timeSpan value of the previous material.
                     "timeSpan":10,//The playback duration of the material on the timeline, in seconds
+                     "url":"",//Material links(and splicing method)
                     "left":0,//The margin between the material and the left in the program
                     "top":0,//Margin from top
                     "width":128,//material width
