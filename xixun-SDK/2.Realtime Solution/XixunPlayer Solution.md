@@ -255,13 +255,7 @@ return success：
 					}]
 				},
 				"repeatTimes": 1,
-				"schedules": [{
-					"dateType": "All",
-					"timeType": "Range",
-					"startTime": "00:00",
-					"endTime": "23:59",
-					"filterType": "None"
-				}]
+				"schedules": []
 			}]
 		}
 	}
